@@ -8,7 +8,6 @@ setup(
     author='Sangmin Lee',
     author_email='smlee99@postech.ac.kr',
     license='MIT',
-    long_description=read('README.md'),
     python_requires='>=3.6',
     install_requires=['numpy'],
     description='Energy decomposition of molecular dynamics simulation trajectories',
