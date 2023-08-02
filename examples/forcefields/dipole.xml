@@ -1,0 +1,42 @@
+<ForceField>
+  <AtomTypes>
+    <Type class="A" element="C" mass="12" name="A"/>
+    <Type class="B" element="N" mass="14" name="B"/>
+    <Type class="C" element="O" mass="16" name="C"/>
+  </AtomTypes>
+  <Residues>
+    <Residue name="DAB">
+      <Atom charge="-0.5" name="A" type="A"/>
+      <Atom charge="0.5" name="B" type="B"/>
+      <Bond atomName1="A" atomName2="B"/>
+    </Residue>
+    <Residue name="DBC">
+      <Atom charge="-0.4" name="B" type="B"/>
+      <Atom charge="0.4" name="C" type="C"/>
+      <Bond atomName1="B" atomName2="C"/>
+    </Residue>
+    <Residue name="DCA">
+      <Atom charge="0" name="C" type="C"/>
+      <Atom charge="0" name="A" type="A"/>
+      <Bond atomName1="C" atomName2="A"/>
+    </Residue>
+  </Residues>
+  <HarmonicBondForce>
+    <Bond k="450000" length="0.2" type1="A" type2="B"/>
+    <Bond k="450000" length="0.2" type1="B" type2="C"/>
+    <Bond k="450000" length="0.2" type1="A" type2="C"/>
+  </HarmonicBondForce>
+  <HarmonicAngleForce>
+  </HarmonicAngleForce>
+  <NonbondedForce coulomb14scale="1.0" lj14scale="1.0">
+    <UseAttributeFromResidue name="charge"/>
+    <Atom epsilon="0.0" sigma="1.0" type="A"/>
+    <Atom epsilon="0.0" sigma="1.0" type="B"/>
+    <Atom epsilon="0.0" sigma="1.0" type="C"/>
+  </NonbondedForce>
+  <LennardJonesForce lj14scale="1.0">
+    <Atom epsilon="0.2" sigma="0.3" type="A"/>
+    <Atom epsilon="0.5" sigma="0.3" type="B"/>
+    <Atom epsilon="1.0" sigma="0.3" type="C"/>
+  </LennardJonesForce>
+</ForceField>
