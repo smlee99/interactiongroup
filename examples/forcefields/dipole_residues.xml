@@ -1,0 +1,17 @@
+<Residues>
+    <Residue name="DAB">
+      <Atom name="A" type="A"/>
+      <Atom name="B" type="B"/>
+      <Bond from="A" to="B"/>
+    </Residue>
+    <Residue name="DBC">
+      <Atom name="C" type="C"/>
+      <Atom name="B" type="B"/>
+      <Bond from="B" to="C"/>
+    </Residue>
+    <Residue name="DCA">
+      <Atom name="A" type="A"/>
+      <Atom name="C" type="C"/>
+      <Bond from="C" to="A"/>
+    </Residue>
+</Residues>
